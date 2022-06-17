@@ -1,0 +1,11 @@
+{
+  "name": "hello-canvaskit-cljs",
+  "version": "0.0.1",
+  "private": true,
+  "devDependencies": {
+    "shadow-cljs": "2.19.3"
+  },
+  "dependencies": {
+    "canvaskit-wasm": "^0.34.1"
+  }
+}

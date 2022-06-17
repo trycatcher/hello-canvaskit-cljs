@@ -1,0 +1,6 @@
+{:dev-http {8081 "public"}
+ :nrepl    {:port 9000}
+ :builds
+ {:app
+  {:target  :browser
+   :modules {:main {:init-fn hello-canvaskit.app/init}}}}}

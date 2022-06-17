@@ -1,0 +1,15 @@
+{:deps
+ {org.clojure/clojure
+  {:mvn/version "1.11.1"}
+  org.clojure/clojurescript
+  {:mvn/version "1.11.57"}
+  thheller/shadow-cljs
+  {:mvn/version "2.19.3"}
+  cider/cider-nrepl
+  {:mvn/version "0.28.4"}
+  refactor-nrepl/refactor-nrepl
+  {:mvn/version "3.5.2"}}
+ :paths ["src"]
+ :aliases
+ {:shadow-cljs
+  {:extra-deps {thheller/shadow-cljs {:mvn/version "2.19.3"}}}}}
