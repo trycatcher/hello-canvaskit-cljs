@@ -1,3 +1,8 @@
+* Goal
+This is an experiment to use [[https://www.npmjs.com/package/canvaskit-wasm][canvaskit-wasm]] from Clojurescript.
+It involves
+
+1. Translating the [[https://skia.org/docs/user/modules/quickstart/][Skia quickstart]] into Cljs.
 * Pre-requisites
 - Clojure
 - Emacs with CIDER
