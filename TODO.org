@@ -1,0 +1,5 @@
+* DX
+- Add presets to help with REPL start. Pre-fill ~server~, ~port~, ~cljs repl~, ~build name~.
+* Toolchain
+- Consume ~canvaskit-wasm~ as a npm module instead of using a CDN.
+- Add a ~bin~ directory to help with running the app and any other cli tasks that might follow.
