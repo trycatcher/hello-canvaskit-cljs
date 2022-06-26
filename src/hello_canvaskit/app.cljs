@@ -15,27 +15,27 @@
   (let [ck-loaded (ck)]
     (.then ck-loaded
            (fn [ck]
-             (let [surface ^js (.MakeCanvasSurface ck "foo")
+             (let [surface (.MakeCanvasSurface ck "foo")
                    paint   (new ^js (.-Paint ck))
-                   rr      ^js (.RRectXY ck
-                                         ^js (.LTRBRect ck
-                                                        10
-                                                        60
-                                                        210
-                                                        260)
-                                25
-                                15)
+                   rr      (.RRectXY ck
+                                     (.LTRBRect ck
+                                                10
+                                                60
+                                                210
+                                                260)
+                                     25
+                                     15)
                    draw    (fn [canvas]
                              (.clear canvas
-                                     ^js (.-WHITE ck))
-                             ^js (.drawRRect canvas
-                                             rr
-                                             paint))]
-               ^js (.setColor paint ^js (.Color4f ck
-                                                  0.9
-                                                  0
-                                                  0 1.0))
-               ^js (.setStyle paint ^js (.-Stroke ^js (.-PaintStyle ck)))
+                                     (.-WHITE ck))
+                             (.drawRRect canvas
+                                         rr
+                                         paint))]
+               (.setColor paint (.Color4f ck
+                                          0.9
+                                          0
+                                          0 1.0))
+               ^js (.setStyle paint (.-Stroke ^js (.-PaintStyle ck)))
                ^js (.setAntiAlias paint true)
                (.drawOnce surface draw)
                (.log js/console "drawn"))))))
