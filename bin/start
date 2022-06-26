@@ -1,4 +1,5 @@
 #/bin/bash
 
 npm install
+cp node_modules/canvaskit-wasm/bin/canvaskit.wasm public/js
 clj -A:shadow-cljs -M -m shadow.cljs.devtools.cli watch app

@@ -1,4 +1,5 @@
-(ns hello-canvaskit.app)
+(ns hello-canvaskit.app
+  (:require ["canvaskit-wasm" :as ck]))
 
 ;; Run this function to see a rectangle show up in the app
 ;; This is also wired up in the `init` function, but that's only
@@ -11,7 +12,7 @@
 ;;        1. Using `js->clj`
 ;;        2. Using  `->` macro
 (defn use-ck []
-  (let [ck-loaded js/ckLoaded]
+  (let [ck-loaded (ck)]
     (.then ck-loaded
            (fn [ck]
              (let [surface ^js (.MakeCanvasSurface ck "foo")
@@ -38,6 +39,7 @@
                ^js (.setAntiAlias paint true)
                (.drawOnce surface draw)
                (.log js/console "drawn"))))))
+
 
 (defn init []
   (println "Hello Canvaskit World!")
