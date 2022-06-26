@@ -45,8 +45,5 @@
   (println "Hello Canvaskit World!")
   (use-ck))
 
-(comment
-  ;;Eval this form to see it show up in the browser
-  ;; console of the running app
-  (println "Let's go!"))
+(use-ck)
 
