@@ -8,7 +8,7 @@ It involves
 - Emacs with CIDER
 * Setup
 - Clone this repository.
-- Start the app with ~clj -A:shadow-cljs -M -m shadow.cljs.devtools.cli watch app~.
+- Start the app with ~bin/start~ (Make it executable first via ~chmod +x bin/start~ or similar).
 - In your browser browse to _localhost:8081_.
 - Navigate to _src/app.cljs_.
 - Start a Cljs REPL with ~C-c M-C~ or ~M-x cider-connect-cljs~.

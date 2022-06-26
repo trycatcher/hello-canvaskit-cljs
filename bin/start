@@ -1,0 +1,4 @@
+#/bin/bash
+
+npm install
+clj -A:shadow-cljs -M -m shadow.cljs.devtools.cli watch app
